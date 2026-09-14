@@ -30,4 +30,4 @@ texte en italique = optionnel si le temps nous permet
 
 ## IOM :
 
-- Configuration borne wifi (Pour IOM)
+- Configuration borne wifi
