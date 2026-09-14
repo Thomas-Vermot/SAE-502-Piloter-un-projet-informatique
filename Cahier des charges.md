@@ -12,6 +12,7 @@ texte en italique = optionnel si le temps nous permet
 - AD, utilisateurs avec droits selon status (chirugiens, infirmières...)
 - Partages NFS selon status utilsateurs
 - *Téléphonie Xlite*
+- *Acces fibre (Maximilien)*
 
 ## Cyber :
 
