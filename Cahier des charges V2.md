@@ -17,7 +17,8 @@ texte en italique = optionnel si le temps nous permet
 - DHCP/DNS (Windows Server)
 - AD, utilisateurs avec droits selon status (chirugiens, infirmières...)
 - Partages NFS selon status utilsateurs
-- BDD médicale (+ sécurité) *+ Site web pour modification BDD*
+- BDD médicale (+ sécurité)
+- Application métier (Site web pour modification BDD)
 - Liste de données sensible
 - *Téléphonie Xlite*
 - *Acces fibre*
