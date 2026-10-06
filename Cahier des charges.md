@@ -40,11 +40,11 @@ texte en italique = optionnel si le temps nous permet
 - Acces sites internet sans passer par le portail
 - Bloquer certain sites
 
-## Organisation :
-
 ## IOM :
 
 - Configuration borne wifi
 - Serveur MQTTS
 - Programme capteur RFID
 - Nodered (logique après lecture RFID)
+  
+## Organisation :
