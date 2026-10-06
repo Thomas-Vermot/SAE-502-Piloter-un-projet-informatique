@@ -17,8 +17,8 @@ Adafruit_PN532 nfc(2, 15);
 const int PIR_PIN = 14;
 
 // --- CONFIGURATION ---
-const char* ssid = "groupe7_sae501";
-const char* password = "groupe7_sae501";
+const char* ssid = "groupe7_sae502";
+const char* password = "groupe7_sae502";
 const char* mqtt_server = "192.168.5.3";
 
 WiFiClient esp;
