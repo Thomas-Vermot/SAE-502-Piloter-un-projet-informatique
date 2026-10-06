@@ -4,8 +4,8 @@ texte en italique = optionnel si le temps nous permet
 
 ## Contraintes
 
-- 1 switch physique, 2 machines client
-- 4 VMs (1 Windows Server, 1 Serveur Linux MQTT)
+- 1 switch physique, 2 postes client
+- 4 VMs (1 Windows Server, 1 Serveur Linux MQTT, 1 serveur BDD)
 - Service informatique sécurisé et redondant 
 
 ## Réseaux :
