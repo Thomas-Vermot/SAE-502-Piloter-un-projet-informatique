@@ -39,7 +39,7 @@ texte en italique = optionnel si le temps nous permet
 - VPN (se concentrer sur un échange précis)
 - Pentest
 - Prévoir possibles attques (au moins 1 vulnérabilité) et contre mesures (+ verif bon fonctionnent contre mesures)
-- Systeme de détection, message d'alerte (Sur FW ?)
+- Systeme de détection, message d'alerte sur le FW
 
 
 ## IOM :
