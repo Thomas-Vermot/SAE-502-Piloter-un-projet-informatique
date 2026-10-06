@@ -17,7 +17,7 @@ texte en italique = optionnel si le temps nous permet
 - DHCP/DNS (Windows Server)
 - AD, utilisateurs avec droits selon status (chirugiens, infirmières...)
 - Partages NFS selon status utilsateurs
-- BDD médicale (dont une à proteger)
+- BDD médicale (+ sécurité)
 - Liste de données sensible
 - Tableau de patient
 - Radius ?
