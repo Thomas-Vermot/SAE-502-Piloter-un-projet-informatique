@@ -11,13 +11,18 @@ texte en italique = optionnel si le temps nous permet
 - DHCP/DNS (Windows Server)
 - AD, utilisateurs avec droits selon status (chirugiens, infirmières...)
 - Partages NFS selon status utilsateurs
+- BDD médicale (dont une à proteger)
+- Liste de données sensible
+- Tableau de patient
+- Radius ?
 - *Téléphonie Xlite*
 - *Acces fibre (Maximilien)*
 
 ## Cyber :
 
 - HSRP
-- VPN
+- VPN (se concentrer sur un échange précis)
+- Pentest
   
 ### Partie FW
 
