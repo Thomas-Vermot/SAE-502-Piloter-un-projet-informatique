@@ -60,5 +60,3 @@ texte en italique = optionnel si le temps nous permet
 - Diagram
 - Plan 
 
-  
-## Organisation :
