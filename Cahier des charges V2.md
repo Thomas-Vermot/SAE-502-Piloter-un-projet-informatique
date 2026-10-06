@@ -19,7 +19,6 @@ texte en italique = optionnel si le temps nous permet
 - Partages NFS selon status utilsateurs
 - BDD médicale (+ sécurité) *+ Site web pour modification BDD*
 - Liste de données sensible
-- Tableau de patient
 - *Téléphonie Xlite*
 - *Acces fibre*
 - *Logiciel Supervision*
