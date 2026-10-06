@@ -2,6 +2,12 @@
 
 texte en italique = optionnel si le temps nous permet
 
+## Contraintes
+
+- 1 swicth physique, 2 machines client
+- 4 VMs
+- Service informatique sécurisé et redondant 
+
 ## Réseaux :
 
 - Plan IP réseaux complet
@@ -24,7 +30,8 @@ texte en italique = optionnel si le temps nous permet
 - HSRP
 - VPN (se concentrer sur un échange précis)
 - Pentest
-- Prévoir possibles attques et contre mesures (+ verif bon fonctionnent contre mesures)
+- Prévoir possibles attques (au moins 1 vulnérabilité) et contre mesures (+ verif bon fonctionnent contre mesures)
+- Systeme de détection, message d'alerte (Sur FW ?)
   
 ### Partie FW
 
