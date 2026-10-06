@@ -17,12 +17,14 @@ texte en italique = optionnel si le temps nous permet
 - Radius ?
 - *Téléphonie Xlite*
 - *Acces fibre (Maximilien)*
+- *Supervision*
 
 ## Cyber :
 
 - HSRP
 - VPN (se concentrer sur un échange précis)
 - Pentest
+- Prévoir possibles attques et contre mesures (+ verif bon fonctionnent contre mesures)
   
 ### Partie FW
 
