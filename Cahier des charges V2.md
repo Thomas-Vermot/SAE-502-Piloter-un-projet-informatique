@@ -20,18 +20,10 @@ texte en italique = optionnel si le temps nous permet
 - BDD médicale (+ sécurité) *+ Site web pour modification BDD*
 - Liste de données sensible
 - Tableau de patient
-- Radius ?
 - *Téléphonie Xlite*
 - *Acces fibre*
 - *Logiciel Supervision*
 - *Roaming*
-
-### Partie FW
-
-- Acces internet (portail captif IUT)
-- portail Stormshield LDAP (avec création users/droits)
-- Acces sites internet sans passer par le portail
-- Bloquer certain sites
   
 ## Cyber :
 
@@ -41,6 +33,13 @@ texte en italique = optionnel si le temps nous permet
 - Prévoir possibles attques (au moins 1 vulnérabilité) et contre mesures (+ verif bon fonctionnent contre mesures)
 - Systeme de détection, message d'alerte sur le FW
 
+### Partie FW
+
+- Acces internet (portail captif IUT)
+- portail Stormshield LDAP (avec création users/droits)
+- Acces sites internet sans passer par le portail
+- Bloquer certain sites
+- Radius
 
 ## IOM :
 
