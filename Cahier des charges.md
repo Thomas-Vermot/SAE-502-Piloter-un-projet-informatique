@@ -45,3 +45,6 @@ texte en italique = optionnel si le temps nous permet
 ## IOM :
 
 - Configuration borne wifi
+- Serveur MQTTS
+- Programme capteur RFID
+- Nodered (logique après lecture RFID)
