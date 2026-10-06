@@ -34,7 +34,7 @@ services:
       - ./mariadb/data:/var/lib/mariadb/data:rw
     environment:
       - MARIADB_ROOT_PASSWORD=mypass
-      - MARIADB_DATABASE=groupe7
+      - MARIADB_DATABASE=hopital
       - MARIADB_USER=groupe7
       - MARIADB_PASSWORD=groupe7
     restart: unless-stopped
