@@ -22,8 +22,8 @@ texte en italique = optionnel si le temps nous permet
 - Tableau de patient
 - Radius ?
 - *Téléphonie Xlite*
-- *Acces fibre (Maximilien)*
-- *Supervision*
+- *Acces fibre*
+- *Logiciel Supervision*
 
 ### Partie FW
 
@@ -48,5 +48,17 @@ texte en italique = optionnel si le temps nous permet
 - Sécurisation MQTTS
 - Programme capteur RFID
 - Nodered (logique après lecture RFID)
+
+## PILPRO :
+
+- cahier des charges
+- Trello (évolutif)
+- Gant (évolutif)
+- Contact DSI hopital
+- Cahier financier (budget global, cyber, iom, infra ect...) 
+- Contact entreprise (réel ou fictive)
+- Diagram
+- Plan 
+
   
 ## Organisation :
