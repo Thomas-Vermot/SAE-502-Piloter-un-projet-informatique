@@ -22,7 +22,6 @@ texte en italique = optionnel si le temps nous permet
 - *Téléphonie Xlite*
 - *Acces fibre*
 - *Logiciel Supervision*
-- *Roaming*
   
 ## Cyber :
 
@@ -47,6 +46,7 @@ texte en italique = optionnel si le temps nous permet
 - Sécurisation MQTTS
 - Programme capteur RFID
 - Nodered (logique après lecture RFID)
+- *Roaming*
 
 ## PILPRO :
 
