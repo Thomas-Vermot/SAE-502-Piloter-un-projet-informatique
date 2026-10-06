@@ -24,6 +24,7 @@ texte en italique = optionnel si le temps nous permet
 - *Téléphonie Xlite*
 - *Acces fibre*
 - *Logiciel Supervision*
+- *Roaming*
 
 ### Partie FW
 
