@@ -25,6 +25,13 @@ texte en italique = optionnel si le temps nous permet
 - *Acces fibre (Maximilien)*
 - *Supervision*
 
+### Partie FW
+
+- Acces internet (portail captif IUT)
+- portail Stormshield LDAP (avec création users/droits)
+- Acces sites internet sans passer par le portail
+- Bloquer certain sites
+  
 ## Cyber :
 
 - VRRP
@@ -32,13 +39,7 @@ texte en italique = optionnel si le temps nous permet
 - Pentest
 - Prévoir possibles attques (au moins 1 vulnérabilité) et contre mesures (+ verif bon fonctionnent contre mesures)
 - Systeme de détection, message d'alerte (Sur FW ?)
-  
-### Partie FW
 
-- Acces internet (portail captif IUT)
-- portail Stormshield LDAP (avec création users/droits)
-- Acces sites internet sans passer par le portail
-- Bloquer certain sites
 
 ## IOM :
 
