@@ -57,5 +57,4 @@ texte en italique = optionnel si le temps nous permet
 - Cahier financier (budget global, cyber, iom, infra ect...) 
 - Contact entreprise (réel ou fictive)
 - Diagramme Global
-- Plan IP
 
