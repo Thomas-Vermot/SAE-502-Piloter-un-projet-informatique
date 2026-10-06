@@ -52,12 +52,12 @@ texte en italique = optionnel si le temps nous permet
 
 ## PILPRO :
 
-- cahier des charges
+- Cahier des charges
 - Trello (évolutif)
-- Gant (évolutif)
+- Gantt (évolutif)
 - Contact DSI hopital
 - Cahier financier (budget global, cyber, iom, infra ect...) 
 - Contact entreprise (réel ou fictive)
-- Diagram
+- Diagramme
 - Plan 
 
