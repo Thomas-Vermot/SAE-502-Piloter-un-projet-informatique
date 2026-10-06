@@ -1,0 +1,49 @@
+services:
+
+  mqtt5:
+    image: eclipse-mosquitto
+    container_name: mqtt5
+    ports:
+      - "1883:1883" #default mqtt port
+      - "8883:8883"
+      - "9001:9001" #default mqtt port for websockets
+    volumes:
+      - ./mqtt/config:/mosquitto/config:rw
+      - ./mqtt/data:/mosquitto/data:rw
+      - ./mqtt/log:/mosquitto/log:rw
+    restart: unless-stopped
+    
+  nodered:
+    image: nodered/node-red
+    container_name: mynodered
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered/node_red_data:/data:rw
+    devices:
+      - "/dev/gpiomem:/dev/gpiomem"
+    privileged: true 
+    restart: unless-stopped
+    
+  mariadb:
+    container_name: mariadb
+    image: mariadb:10.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mariadb/data:/var/lib/mariadb/data:rw
+    environment:
+      - MARIADB_ROOT_PASSWORD=mypass
+      - MARIADB_DATABASE=groupe7
+      - MARIADB_USER=groupe7
+      - MARIADB_PASSWORD=groupe7
+    restart: unless-stopped
+    
+volumes:
+  config:
+  data:
+  log:
+
+networks:
+  mqtt5-network:
+    external: true
