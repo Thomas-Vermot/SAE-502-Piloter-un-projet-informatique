@@ -19,7 +19,7 @@ const int PIR_PIN = 14;
 // --- CONFIGURATION ---
 const char* ssid = "groupe7_sae502";
 const char* password = "groupe7_sae502";
-const char* mqtt_server = "192.168.5.3";
+const char* mqtt_server = "192.168.3.4";
 
 WiFiClient esp;
 PubSubClient client(esp);
@@ -65,7 +65,6 @@ void setup() {
   Serial.begin(115200);
   setup_wifi();
   client.setServer(mqtt_server, 1883);
-  dht22.begin();
   Wire.begin(4, 5);
   pinMode(PIN_TO_SENSOR, INPUT);
   pinMode(TILT_PIN, INPUT_PULLUP);
