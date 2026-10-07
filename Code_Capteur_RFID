@@ -24,8 +24,8 @@ const char* mqtt_server = "192.168.3.4";
 WiFiClient esp;
 PubSubClient client(esp);
 
-const char* mqtt_user = "esp";
-const char* mqtt_mdp = "esp";
+const char* mqtt_user = "groupe7";
+const char* mqtt_mdp = "groupe7";
 
 void setup_wifi() {
   delay(10);
