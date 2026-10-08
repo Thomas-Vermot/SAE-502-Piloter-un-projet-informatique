@@ -19,7 +19,7 @@ const int PIR_PIN = 14;
 // --- CONFIGURATION ---
 const char* ssid = "groupe7_sae502";
 const char* password = "groupe7_sae502";
-const char* mqtt_server = "192.168.1.104";
+const char* mqtt_server = "192.168.50.4";
 
 WiFiClient esp;
 PubSubClient client(esp);
