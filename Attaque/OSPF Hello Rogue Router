@@ -1,0 +1,96 @@
+Voici le rapport synthétique sur la vulnérabilité liée aux messages OSPF Hello, la contre-mesure par `passive-interface` et la procédure de validation.
+
+---
+
+# Rapport de Sécurité : Attaque OSPF Hello & Contre-Mesure
+
+## 1. Description de l'attaque (OSPF Hello Rogue Router)
+
+Par défaut, dès qu'une interface routeur est déclarée dans un processus OSPF (`network 192.168.x.0 ...`), elle émet périodiquement des paquets **OSPF Hello** en multicast (`224.0.0.5`) pour découvrir ses voisins.
+
+### Mécanisme de l'attaque :
+
+1. **Reconnaissance** : Un attaquant connecté sur un port d'accès (ex: LAN 3 ou LAN 4) lance une capture de trafic (Wireshark) et intercepte les paquets OSPF Hello provenant du routeur. Il en déduit l'ID du processus, le Process ID, l'Area OSPF, la clé d'authentification (si absente) et les timers.
+2. **Injection d'un routeur pirate** : L'attaquant monte un routeur virtuel (via *GNS3*, *Scapy* ou *FRRouting*) avec une priorité OSPF maximale (`255`).
+3. **Usurpation de la topologie** : En établissant une adjacence OSPF avec le routeur de l'hôpital, l'attaquant injecte de fausses routes (ex: une route par défaut `0.0.0.0/0` ou vers le LAN 5 Serveurs) avec un coût plus faible.
+4. **Impact** :
+* **Man-in-the-Middle (MitM)** : Redirection de tout le trafic des VLANs vers la machine de l'attaquant avant réémission.
+* **Déni de Service (DoS)** : Envoi du trafic vers un « trou noir » (*blackholing*).
+
+
+
+---
+
+## 2. Contre-mesure : Commande `passive-interface`
+
+La directive **`passive-interface`** empêche l'émission et la réception de paquets OSPF sur l'interface ciblée tout en **conservant l'annonce du réseau** dans les messages Link-State Advertisements (LSA) envoyés aux autres routeurs du cœur de réseau.
+
+### Configuration sur les routeurs VRRP (R9 / R1) :
+
+```text
+router ospf 1
+ ! Désactive l'envoi de Hello vers les VLANs d'accès clients/serveurs
+ passive-interface FastEthernet0/0.10
+ passive-interface FastEthernet0/0.20
+ passive-interface FastEthernet0/0.30
+ passive-interface FastEthernet0/0.40
+ passive-interface FastEthernet0/0.50
+
+```
+
+> **Alternative globale (recommandée) :** Passer toutes les interfaces en passif par défaut et n'activer OSPF que sur les liens d'interconnexion `/30` :
+> ```text
+> router ospf 1
+>  passive-interface default
+>  no passive-interface FastEthernet0/1  ! Lien inter-routeur L3
+> 
+> ```
+> 
+> 
+
+---
+
+## 3. Validation et Tests de fonctionnement
+
+### A. Vérification sur le CLI du routeur
+
+Pour confirmer qu'une sous-interface est bien en mode passif :
+
+```text
+# Vérifier l'état OSPF d'une sous-interface spécifique
+show ip ospf interface FastEthernet0/0.30
+
+```
+
+**Résultat attendu :**
+
+```text
+FastEthernet0/0.30 is up, line protocol is up
+  Internet Address 192.168.3.252/24, Area 0
+  Process ID 1, Router ID 10.0.0.24, Network Type BROADCAST, Cost: 1
+  No Hellos (Passive interface)
+
+```
+
+*(La mention **No Hellos (Passive interface)** confirme le blocage).*
+
+---
+
+### B. Procédure de test avec Wireshark (Capture réseau)
+
+Pour valider l'absence de fuite d'informations sur le LAN :
+
+1. **Branchement** : Connecte un PC de test avec Wireshark sur un port d'accès du switch (ex: Switch2 sur le LAN 3).
+2. **Filtre de capture** : Applique le filtre OSPF :
+```text
+ospf || ip.dst == 224.0.0.5
+
+```
+
+
+3. **Analyse des résultats** :
+
+| Scénario | Comportement Wireshark | Statut Sécurité |
+| --- | --- | --- |
+| **Avant contre-mesure** | Réception de paquets `OSPF Header` toutes les 10 secondes vers `224.0.0.5`. | **VULNÉRABLE** |
+| **Après `passive-interface**` | **Aucun** paquet OSPF capturé au bout de 60 secondes. | **SÉCURISÉ** |
