@@ -26,9 +26,9 @@ done
 sudo docker exec -i mariadb mysql -u root -p"mypass" -e "CREATE DATABASE IF NOT EXISTS hopital; GRANT ALL PRIVILEGES ON hopital.* TO 'groupe7'@'%';"
 sudo docker exec -i mariadb mysql -u root -p"mypass" -e "CREATE TABLE IF NOT EXISTS hopital.RFID(id VARCHAR(50), jaune BOOLEAN, rouge BOOLEAN, PRIMARY KEY(id));"
 #if save -> import it
-if [ -e save_database.sql ]
+if [ -e /home/tp/SAE_502_Groupe7/mariadb/save_database.sql ]
 then
-	sudo docker exec -i mariadb mysql -u root -p"mypass" hopital < save_database.sql
+	sudo docker exec -i mariadb mysql -u root -p"mypass" hopital < /home/tp/SAE_502_Groupe7/mariadb/save_database.sql
 	echo "Last save imported into the database"
 fi
 
