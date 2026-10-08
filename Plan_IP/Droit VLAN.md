@@ -21,5 +21,5 @@
 
 # Vlan 50
 
-- Acces sur tout le réseaux
+- Acces sur tout le réseaux interne seulement
     
