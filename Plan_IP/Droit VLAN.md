@@ -21,6 +21,5 @@
 
 # Vlan 50
 
-- Acces 192.168.50.0/24
-- Acces réseaux routeur 10.0.0.0/24
+- Acces sur tout le réseaux
     
