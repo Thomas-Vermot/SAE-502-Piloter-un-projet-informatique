@@ -1,7 +1,3 @@
-Voici le rapport synthétique sur la vulnérabilité liée aux messages OSPF Hello, la contre-mesure par `passive-interface` et la procédure de validation.
-
----
-
 # Rapport de Sécurité : Attaque OSPF Hello & Contre-Mesure
 
 ## 1. Description de l'attaque (OSPF Hello Rogue Router)
