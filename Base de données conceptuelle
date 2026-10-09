@@ -1,4 +1,4 @@
-Patient(<u>ID</u>,Nom,Prenom,Age,Contact,Groupe_Sanguin)
+Patient(ID,Nom,Prenom,Age,Contact,Groupe_Sanguin)
 Medecin(ID,Nom,Prenom,Specialite,Contact)
 Admission(ID,Id_Patient,Date_Admission,Date_Depart,Raison_Admission,Chambre)
 Operation(ID,Id_Patient,Id_Medecin,Date)
