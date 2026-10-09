@@ -5,6 +5,7 @@ Prérequis :
 - Création de VLAN avec ACL,
 - Utilisation de pare-feu,
 - Services DHCP/DNS/AD,
+- Utilisation de machines virtuelles,
 - Utilisation d'une base de données,
 - Création d'une application métier,
 - Utilisation de MQTT pour l'IoT,
